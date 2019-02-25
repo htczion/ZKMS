@@ -9,7 +9,7 @@ ZKMS SDK packaged as an AAR file that can be imported to your android App projec
 ### 2.1 Put ZKMS SDK .AAR to lib folder
 Copy the .AAR file which provided by HTC to your APP project lib path
 ```
-<Project Name>\app\libs\HtcWalletSDK-release.aar
+<Project Name>\app\libs\ZKMS-release.aar
 ```
 
 ### 2.2 Config and Sync your build.gradle
