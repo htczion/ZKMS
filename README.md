@@ -17,7 +17,7 @@ Set dependencies in build.gradle
 ```
 dependencies {
 ...
-compile(name:'htcwalletsdk-release', ext:'aar')
+compile(name:'ZKMS-release', ext:'aar')
 ...
 }
 ```
