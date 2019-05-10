@@ -50,9 +50,7 @@ deploy:
   provider: releases 
   api_key:           
     secure: $ZKMS
-  file:
-    - "app/build/outputs/apk/Htc_partner1/release/app-Htc_partner1-release.apk"
-    - "ZKMSaar/build/outputs/aar/ZKMSaar-Htc_partner1-release.aar"
+  file: "ZKMSaar/build/outputs/aar/ZKMSaar-Htc_partner1-release.aar"
   skip_cleanup: true
   overwrite: true
   
