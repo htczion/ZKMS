@@ -49,7 +49,7 @@ script:
 deploy:             
   provider: releases 
   api_key:           
-    secure: $SDK
+    secure: $ZKMS
   file:
     - "app/build/outputs/apk/Htc_partner1/release/app-Htc_partner1-release.apk"
     - "HtcWalletSDK/build/outputs/aar/HtcWalletSDK-Htc_partner1-release.aar"
@@ -57,5 +57,5 @@ deploy:
   overwrite: true
   
   on:               
-    repo: sean208208/github_SDK
+    repo: htczion/ZKMS
     tags: true
