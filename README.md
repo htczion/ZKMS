@@ -11,10 +11,6 @@ https://github.com/htczion/ZKMS/wiki
 For HW wallet, SDK will check the compatibility between ROM,SDK and TrustZone. 
 About the details of version number, you can find at section [Compatibility](https://github.com/htczion/ZKMS/wiki#compatibility).  
 
-### ZKMS ver: 3.3.0:   
-
-3.3.0 , ZKMS_ver= 3.3.0    
-    support getAccountExtPublicKey/getBipExtPublicKey APIs  
     
 ### ZKMS ver: 2.0.0:   
 
