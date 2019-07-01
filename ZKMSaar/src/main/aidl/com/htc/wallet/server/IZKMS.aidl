@@ -25,6 +25,7 @@ import com.htc.wallet.server.ByteArrayHolderParcel;
 
 // Declare any non-default types here with import statements
 interface IZKMS {
+    // V2.0.0
     int init(int processId, String ZKMS_version);
     String getModuleVersion();
     String getApiVersion();
@@ -47,4 +48,7 @@ interface IZKMS {
     int unregister(String wallet_name, String sha256, long unique_id);
     int deinit(int processId);
     int getLastError();
+    // V3.3.0
+    PublicKeyHolderParcel getAccountExtPublicKey(long unique_id, int bips, int coinType, int account);
+    PublicKeyHolderParcel getBipExtPublicKey(long unique_id, int bips, int coinType, int account, int change, int index);
 }
