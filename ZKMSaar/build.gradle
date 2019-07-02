@@ -1,27 +1,7 @@
-apply plugin: 'com.android.library'
+﻿apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-
-    signingConfigs {
-        println 'signingConfigs ****'
-
-        debugSDK {
-            println 'debugSDK +++'
-            keyAlias 'debugSDK'
-            keyPassword 'android'
-            storeFile file('./../HtcWalletSDK/private/hms.jks')
-            storePassword 'android'
-        }
-
-        releaseSDK {
-            println 'releaseSDK +++'
-            keyAlias 'releaseSDK'
-            keyPassword 'android'
-            storeFile file('./../HtcWalletSDK/private/hms.jks')
-            storePassword 'android'
-        }
-    }
 
     defaultConfig {
         minSdkVersion 19
@@ -33,39 +13,16 @@ android {
 
     }
 
-    flavorDimensions "Htc_internal" // set your flavor dimension for build .AAR at here
-    productFlavors {
-        Htc_internal {
-            println 'BUILD: flavorDimensions = Htc_internal +++'
-            flavorDimensions "Htc_internal"
-            buildConfigField "int", "PARTNER_ID", "0"
-        }
-
-        Htc_partner1 {
-            println 'BUILD: flavorDimensions = Htc_partner1 +++'
-            flavorDimensions "Htc_partner1"
-            buildConfigField "int", "PARTNER_ID", "1"
-        }
-
-        Htc_partner2 {
-            println 'BUILD: flavorDimensions = Htc_partner2 +++'
-            flavorDimensions "Htc_partner2"
-            buildConfigField "int", "PARTNER_ID", "2"
-        }
-    }
-
     buildTypes {
         release {
             println 'BUILD: release +++'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseSDK
         }
 
         debug {
             println 'BUILD: debug +++'
             useProguard true
-            signingConfig signingConfigs.debugSDK
         }
     }
 
@@ -81,22 +38,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-
-task copyAAR(type: Copy) {
-    // delete '../app/libs/ZKMA.aar'
-
-    doFirst {
-        println 'Copying the output .AAR files to app/libs for test ++++++++'
-    }
-    doLast {
-        println 'Copying the output .AAR files to app/libs for test --------'
-    }
-
-    from('build/outputs/aar')
-    into('../app/libs')
-    include(project.name + '-release.aar')
-    include(project.name + '-debug.aar')
-
-    // rename(project.name + '-release.aar', 'ZKMA.aar')
-}
 
