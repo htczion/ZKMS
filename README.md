@@ -3,19 +3,31 @@
 [![Build Status](https://travis-ci.com/htczion/ZKMS.svg?branch=master)](https://travis-ci.com/htczion/ZKMS)  
 [![](https://jitpack.io/v/htczion/ZKMS.svg)](https://jitpack.io/#htczion/ZKMS)  
 
-Integration guide for creating a wallet using Zion Key Management Service
+ZKMS (Zion Key Management Service) is a service which provides a way for developers to manage seed security built into HTC EXODUS devices, which integrate Zion protection. All secure operations (input pin, display seed, sign transaction…) will be performed by the trusted OS and no secure data exposed to the rest of Android.  
 
-https://github.com/htczion/ZKMS/wiki
+All details at https://github.com/htczion/ZKMS/wiki
 
+## Support coin types:  
+- BTC  
+- BCH  
+- BNB  
+- ETH  
+- LTC  
 
 ## Change List:  
 For HW wallet, SDK will check the compatibility between ROM,SDK and TrustZone. 
 About the details of version number, you can find at section [Compatibility](https://github.com/htczion/ZKMS/wiki#compatibility).  
 
-### ZKMS ver: 3.3.0:(Developing)   
+### ZKMS ver: 3.3.0:  
 
-- 3.3.0  
-    Added getAccountExtPublicKey and getBipExtPublicKey APIs for xPub  
+- 3.4.6  
+    Support BNB  
+
+- 3.4.0  
+    Support BCH  
+
+- 3.3.1  
+    Added getAccountExtPublicKey and getBipExtPublicKey APIs for ZKMS  
     
 ### ZKMS ver: 2.0.0:   
 
